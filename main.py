@@ -35,9 +35,9 @@ car.print_passengers_names()
 """
 
 
-class Human :
-    def __init__(self, name="Human", job=None,home=None, car=None):
-        self.name =name
+class Human:
+    def __init__(self, name="Human", job=None, home=None, car=None):
+        self.name = name
         self.money = 100
         self.gladness = 50
         self.satiety = 50
@@ -49,7 +49,7 @@ class Human :
         self.home = House()
 
     def get_car(self):
-        self.car = Auto(brand_of_car)
+        self.car = Auto(brands_of_car)
 
     def get_job(self):
         if self.car.drive():
@@ -58,7 +58,6 @@ class Human :
             self.to_repair()
             return
         self.job = Job(job_list)
-
 
     def eat(self):
         if self.home.food <= 0:
@@ -69,7 +68,6 @@ class Human :
                 return
             self.satiety += 5
             self.home.food -= 5
-
 
     def work(self):
         if self.car.drived:
@@ -85,7 +83,7 @@ class Human :
         self.gladness -= self.gLadness_Less
         self.satiety -= 4
 
-    def shopping(self,manage):
+    def shopping(self, manage):
         if self.car.drive():
             pass
         else:
@@ -120,23 +118,33 @@ def to_repair(self):
     self.car.strength += 100
     self.money -= 50
 
-
 def days_indexes(self, day):
-    day = f"Today {day} of {self-name}'s lie"
-    print (f"{day: ^50) ", "in")
-    human_indexes = self.name +
-    print(f"{human_indexes:^50} , "\n")
-    print(f"Money - {self. money}")
-    print(ersetiety - (sett setiety!")
-    print(f"oladness - (sett gLadness)")
-    home _indexes = "Hono indexes"
-    print (r*-(hone_indexess+50)"
-    print(r*Food - (sett-home.rood)")
-    print(+"Ness - (self.hone.ness)n)
-    car _indexes = ("(sett-car.brand) con indoxes"
-    print(r* (car _indexess"50), «in)
-    print (F*Fuel - (sett-car.fuel)")
-    print (restrength (sett. car. strength)
+    day = f"Today {day} of {self.name}'s life"
+    print(f"{day:^50}", "\n")
+    human_indexes = self.name + "`s indexes"
+    print(f"{human_indexes:^50}", "\n")
+    print(f"Money - {self.money}")
+    print(f"Satiety - {self.satiety}")
+    print(f"Gladness - {self.gladness}")
+    home_indexes = "Home indexes"
+    print(f"{home_indexes:^50}", "\n")
+    print(f"Food - {self.home.food}")
+    print(f"Mess - {self.home.mess}")
+    car_indexes = f"{self.car.brand} car indexes"
+    print(f"{car_indexes:^50}", "\n")
+    print(f"Fuel - {self.car.fuel}")
+    print(f"Strength - {self.car.strength}")
+
+    def is_alive(self):
+        if self.gladness < 0:
+            print("Depression...")
+            return False
+        if self.satiety < 0:
+            print("Dead..")
+            return False
+        if self.money <= 500:
+            print("Bankrupt...")
+            return False
 
 class Auto :
     pass
